@@ -31,3 +31,7 @@ function module:EquipTowers(one, two, three, four)
     
     game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("EquipTower"):FireServer(unpack(args))    
 end
+
+
+
+return module
