@@ -1,0 +1,33 @@
+local module = {}
+
+for i=1, 4 do
+    local args = {
+        [1] = game:GetService("Players"):WaitForChild("proudCdthekitten"):WaitForChild("slots"):WaitForChild(tostring(i))
+    }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("RemoveTower"):FireServer(unpack(args))
+    
+end
+
+function module:EquipTowers(one, two, three, four)
+    local args = {
+        [1] = workspace:WaitForChild("Shop"):WaitForChild("Towers"):WaitForChild(one)
+    }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("EquipTower"):FireServer(unpack(args))    
+    local args = {
+        [1] = workspace:WaitForChild("Shop"):WaitForChild("Towers"):WaitForChild(two)
+    }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("EquipTower"):FireServer(unpack(args))    
+    local args = {
+        [1] = workspace:WaitForChild("Shop"):WaitForChild("Towers"):WaitForChild(three)
+    }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("EquipTower"):FireServer(unpack(args))    
+    local args = {
+        [1] = workspace:WaitForChild("Shop"):WaitForChild("Towers"):WaitForChild(four)
+    }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("EquipTower"):FireServer(unpack(args))    
+end
