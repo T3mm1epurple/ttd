@@ -12,7 +12,6 @@ for i=1, 4 do
 end
 
 function module:EquipTowers(one, two, three, four)
-    if gameid == 9966214908 then
     local args = {
         [1] = workspace:WaitForChild("Shop"):WaitForChild("Towers"):WaitForChild(one)
     }
@@ -34,26 +33,21 @@ function module:EquipTowers(one, two, three, four)
     
     game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("EquipTower"):FireServer(unpack(args))    
 end
-end
 
 function module:VoteMap(map)
-    if gameid == 9966384278 then
         local args = {
             [1] = map
         }
         
         game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("VoteMap"):FireServer(unpack(args))
-    end
 end
 
 function module:VoteMode(mode)
-    if gameid == 9966384278 then
         local args = {
             [1] = mode
         }
         
         game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("VoteMode"):FireServer(unpack(args))        
-    end
 end
 
 
