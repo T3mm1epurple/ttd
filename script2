@@ -3,12 +3,13 @@ local plr = game.Players.LocalPlayer
 local gameid = game.PlaceId
 
 for i=1, 4 do
+local yes, no = pcall(function()
     local args = {
         [1] = game:GetService("Players"):WaitForChild("proudCdthekitten"):WaitForChild("slots"):WaitForChild(tostring(i))
     }
     
     game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("RemoveTower"):FireServer(unpack(args))
-    
+    end)
 end
 
 function module:EquipTowers(one, two, three, four)
